@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ecommerce.views import list_available_machine_product_types, list_available_machine_models, list_available_machine_water_lines, get_machine_json
+from ecommerce.views import(
+    list_available_machine_product_types,
+    list_available_machine_models,
+    list_available_machine_water_lines,
+    list_available_pods_product_type,
+    list_available_pods_flavor,
+    list_available_pods_pack_size,
+)
 
 
 urlpatterns = [
@@ -23,7 +30,9 @@ urlpatterns = [
     path('machine/product_type/', list_available_machine_product_types),
     path('machine/product_model/<int:product_id>', list_available_machine_models),
     path('machine/product_type/<int:product_id>/water_line/<int:model_id>', list_available_machine_water_lines),
-    path('pods/', list_available_machine_water_lines),
+    path('pods/product_type/', list_available_pods_product_type),
+    path('pods/product_type/pack_size/<int:product_id>', list_available_pods_flavor),
+    path('pods/product_type/product_type/<int:product_id>/flavor/<int:flavor_id>', list_available_pods_pack_size),
 
 
 ]
