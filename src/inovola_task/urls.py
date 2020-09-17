@@ -20,10 +20,10 @@ from ecommerce.views import list_available_machine_product_types, list_available
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('machine/', list_available_machine_product_types),
-    path('machine/<int:product_id>', list_available_machine_models),
-    path('machine/<int:product_id>/<int:model_id>', list_available_machine_water_lines),
-    path('machine/<int:product_id>/<int:model_id>/<str:water_type>', get_machine_json),
+    path('machine/product_type/', list_available_machine_product_types),
+    path('machine/product_model/<int:product_id>', list_available_machine_models),
+    path('machine/product_type/<int:product_id>/water_line/<int:model_id>', list_available_machine_water_lines),
+    path('pods/', list_available_machine_water_lines),
 
 
 ]
