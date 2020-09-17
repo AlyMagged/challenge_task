@@ -5,13 +5,13 @@
     <title>Coffee Machine</title>
 </head>
 <body>
-    <h1>Select Coffee Machine Type</h1>
-    <form>
-        <label for="product_type">Choose a product type: </label>
+    <h1>Select Coffee Machine Model</h1>
+    <form method="POST" action="machine/water/{{ object.id }}">
+        <label for="product_type">Choose a model: </label>
         <select name="product_type" id="product_type">
             {% for object in object_list %}
                 <option value="{{ object.name }}">{{ object.name }}</option>
-            {%endfor%}
+            {% endfor %}
         </select>
         <br><br>
         <input type="submit" value="Submit">

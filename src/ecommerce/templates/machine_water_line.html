@@ -5,12 +5,12 @@
     <title>Coffee Machine</title>
 </head>
 <body>
-    <h1>Select Coffee Machine Type</h1>
+    <h1>Select Coffee Machine Water Line</h1>
     <form method="POST" action="machine/{{ object.id }}">
-        <label for="product_type">Choose a product type: </label>
+        <label for="product_type">Choose a water line: </label>
         <select name="product_type" id="product_type">
             {% for object in object_list %}
-                <option value="{{ object.name }}">{{ object.name }}</option>
+                <option value="{{ object.type }}">{{ object.type }}</option>
             {% endfor %}
         </select>
         <br><br>
