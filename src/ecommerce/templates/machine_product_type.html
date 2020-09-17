@@ -6,7 +6,8 @@
 </head>
 <body>
     <h1>Select Coffee Machine Type</h1>
-    <form method="POST" action="machine/{{ object.id }}">
+    <form method="POST" action="/machine/{{object.id}}"> {% csrf_token %}
+        <h1>{{object.id}}</h1>
         <label for="product_type">Choose a product type: </label>
         <select name="product_type" id="product_type">
             {% for object in object_list %}

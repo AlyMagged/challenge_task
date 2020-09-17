@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Select Coffee Machine Water Line</h1>
-    <form method="POST" action="machine/{{ object.id }}">
+    <form method="POST" action="machine/{{ product_id }}/{{ model_id }}/{{ object.type }}/">
         <label for="product_type">Choose a water line: </label>
         <select name="product_type" id="product_type">
             {% for object in object_list %}
