@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Machine</title>
+</head>
+<body>
+    <h1>Select Coffee Machine Type</h1>
+    <form>
+        <label for="product_type">Choose a product type: </label>
+        <select name="product_type" id="product_type">
+            {% for object in object_list %}
+                <option value="{{ object.name }}">{{ object.name }}</option>
+            {%endfor%}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

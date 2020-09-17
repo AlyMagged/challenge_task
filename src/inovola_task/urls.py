@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ecommerce.views import list_available_machine_product_types
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('machine/', list_available_machine_product_types),
+
 ]
